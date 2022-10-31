@@ -1,0 +1,68 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+  }
+  
+  nav a{
+    margin: 0 2rem;
+    color: var(--textColor);
+    text-decoration: none;
+  }
+  
+  nav a:hover{
+    color: var(--secondaryColor);
+  }
+  
+  header .nav-btn{
+    display: none;
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  
+  @media only screen and (max-width: 1024px){
+    header .nav-btn{
+      display: block;
+    }
+  
+    header nav{
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1.5rem;
+      background-color: var(--mainColor);
+      transition: 1s;
+      transform: translateY(-100vh);
+    }
+  
+    header .responsive_nav{
+      transform: none;
+    }
+  
+    nav .nav-close-btn{
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+  
+    nav a{
+      font-size: 1.5rem;
+    }
+  }
+  
+  
